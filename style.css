@@ -1,0 +1,73 @@
+/*|#MakVie-SAinte|*/
+
+*, *::before, *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   word-break: break-all;
+}
+
+html {
+   font-size: 100%;
+}
+
+body {
+   background-color: #f4f4f4;
+   color: #333;
+   font-family: sans-serif;
+}
+
+.container-input {
+   width: 70%;
+   max-width: 600px;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+label {
+   font-size: 25px;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   padding-left: 17px;
+   transition: all .33s ease-out;
+}
+
+input {
+   width: 100%;
+   font-size: 25px;
+   padding: 25px;
+   border: 0; outline: 0;
+   border-radius: 10px;
+   transition: border 0.2s ease-out;
+}
+
+.container-input span {
+   position: absolute;
+   top: 95px; left: 5px;
+   color: red;
+   display: none;
+}
+
+.container-input:focus-within label,
+.container-input.active-input label {
+   top: -24px;
+   padding-left: 2px;
+}
+
+.container-input:focus-within .inp-anim,
+.container-input.active-input .inp-anim {
+   border: 2px solid green;
+}
+
+.erreur {
+   border: 2px solid red !important;
+}
+
+.visibleTxt {
+   display: block !important;
+}
+
+/* 925DEV */
